@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer - Pomodoro</title>
+  <meta name="description" content="Temporizador estilo Pomodoro">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./src/main.js" defer></script>
+</head>
+<body> 
+  <div id="app">
+
+    <button id="toggle-mode" class="control-button">
+      <span class="sr-only">Ativar light mode</span>
+      <i class="ph-bold ph-sun"></i>
+      <i class="ph-bold ph-moon"></i>
+    </button>
+
+    <section id="timer-section">
+
+      <section id="timer" class="flex">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+
+      <section id="controls" class="flex controls-section">
+        <button data-action="setRunning" class="control-button ph-light ph-play-circle">
+          <span class="sr-only">Iniciar contador</span>
+        </button>
+        <button  data-action="setPause" class="control-button ph-light ph-stop-circle">
+          <span class="sr-only">Pausar contador</span>
+        </button>
+        <button data-action="plus5" class="control-button ph-light ph-plus-circle">
+          <span class="sr-only">Aumentar 5 minutos</span>
+        </button>
+        <button data-action="minus5" class="control-button ph-light ph-minus-circle">
+          <span class="sr-only">Diminuir 5 minutos</span>
+        </button>
+      </section>
+
+    </section>
+
+    <section id="songs" class="songs-section">
+      <button data-action="playFlorest" class="song-button ph-light ph-tree">
+        <span class="sr-only">Iniciar som de floresta</span>
+      </button>
+      <button data-action="playRain" class="song-button ph-light ph-cloud-rain">
+        <span class="sr-only">Iniciar som de chuva</span>
+      </button>
+      <button data-action="playCoffeeShop" class="song-button ph-light ph-coffee">
+        <span class="sr-only">Iniciar som de cafeteria</span>
+      </button>
+      <button data-action="playFirePlace" class="song-button ph-light ph-campfire">
+        <span class="sr-only">Iniciar som de lareira</span>
+      </button>
+    </section>
+
+  </div>
+</body>
+</html>
